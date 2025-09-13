@@ -63,6 +63,10 @@ global perfSetting := "Default"
 
 WinActivate, ahk_exe RobloxPlayerBeta.exe
 Gosub, ShowGui
+openSnipTool() {
+    ; Opens Windows Snip & Sketch (Win + Shift + S equivalent)
+    Run, ms-screenclip:
+}
 
 StartMacro:
     if(started = 0) {
@@ -1065,4 +1069,7 @@ Return
 
 F7::
     Gosub, PauseMacro
+Return
+# + s::  ; Windows + Shift + S
+    openSnipTool()
 Return
